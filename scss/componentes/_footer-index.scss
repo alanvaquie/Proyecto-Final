@@ -1,0 +1,99 @@
+/* ------------FOOTER----------- */
+  
+.footer-box-links li a:hover {
+    color: red;
+  
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 12px;
+    color: $color-parrafo;
+    background-color: transparent;
+  }
+  
+  .footer-container > *{
+    flex: 1 100%;
+  }
+  
+  .footer-left {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+  }
+  
+  .footer-left img {
+    width: 50%;
+  }
+  
+  .footer-right li h2 {
+    font-weight: 600;
+    font-size: 17px;
+  }
+  
+  .footer-container ul{
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .footer-container li {
+    line-height: 2em;
+  }
+  
+  .footer-container a {
+    text-decoration: none;
+  }
+  
+  .footer-right {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  .footer-right >*{
+    flex: 1 50%;
+    margin-right: 1.25em;
+  }
+  
+  .footer-box a {
+    color: $color-parrafo;
+  }
+  
+  .footer-left p{
+    padding-right: 20%;
+    color: $color-parrafo;
+  }
+  
+  /*Ahora acomodamos el footer para que se vea cada uno a la izquierda y el otro a la derecha*/
+  @media screen {
+    .footer-right > *{
+       flex: 1;
+    }
+    .footer-left{
+       flex: 1 0px;
+    }
+    .footer-right{
+       flex: 2 0px;
+    }
+  
+  }
+  
+  
+  /* Agrandar las redes sociales cuando paso el mouse */
+  .redes-sociales a i {
+    transition: 0.5s;
+  }
+  
+  
+  .redes-sociales a i:hover {
+    @include agrandar(scale(1.2));
+  }
+
+  .redes-sociales a i { /*agrandamos el tamaño de los iconos de redes sociales*/
+    font-size:xx-large   ;
+    color: red;
+  }
+
+  .redes-sociales {   
+    display: inline-block;
+  
+  }

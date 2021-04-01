@@ -1,0 +1,60 @@
+/* ------------------------------CSS DE INDEX------------------------------- */
+
+.main-index-container {
+  /* distancio el main del footer */
+  margin-bottom: 100px;
+}
+
+.ruleta-contenedor {
+  /* tamaño para la ruleta */
+  max-width: 500px;
+  
+  max-height: auto;
+}
+
+
+.header-container {
+  /* pongo de fondo la imagen GIF, que no se repita y este centrada... el padding es para que se vea completa */
+
+  background-color: transparent;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+
+
+
+.primero {
+  font-family: 'runic';
+  font-size: 8em;
+  color: dimgrey;
+}
+
+
+
+.parrafo0 {
+
+  font-family: 'runic';
+  font-size: 2.5em;
+  text-align: left;
+  color: goldenrod;
+}
+
+.parrafo1 {
+  font-family: 'Reggae One', cursive;
+  text-align: center;
+  margin: auto;
+  color: $color-parrafo;
+  font-size: 15px;
+}
+
+
+
+
+/* Fondo de pantalla del index */
+.full-body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)), url(../imagenes/Fondo-de-pantalla.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

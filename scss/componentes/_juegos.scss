@@ -1,0 +1,46 @@
+ /* ------------------------------------------------CSS DE JUEGOS---------------------------------------- */ 
+  
+ #header-j {
+    font-family: 'runic'; 
+    font-size: 4em;
+    color: $color-parrafo;
+ }
+ 
+ /* Todos los h3 que son los titulos sean iguales */
+ .h3-j {
+@extend %h3-secciones;
+   }
+ 
+ 
+ /* Todos los parrafos iguales */
+ .parrafo-j {
+   margin-top: 20px;
+   margin-bottom: 20px;
+  font-family: 'reggae one';
+  text-indent: 10px;
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  color: $color-parrafo;
+ }
+ 
+ 
+ /* Centrar las imagenes */
+ .img-j {
+    display: block;
+    margin: auto;
+    padding: 10px;
+    width: 300px;
+    height: auto;
+ }
+ 
+ .full-body-j {
+   background-image:linear-gradient(rgba(0, 0, 0, 0.7),
+   rgba(0, 0, 0, 0.7)), url(../imagenes/bg-juegos.jpg); /*Con el linear-gradient le meto una capa transparente negra encima para opacar la imagen de fondo*/
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
+   
+ }

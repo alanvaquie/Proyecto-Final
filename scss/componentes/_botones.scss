@@ -1,0 +1,228 @@
+li, ul, a, button { /* le saco los estilos a las listas (puntos por ejemplo) */
+    list-style: none;
+    text-decoration: none; 
+    }
+
+
+/*-------------------Boton de comentarios-------------------------*/
+
+
+#boton-comentarios { /*Agrego letra a los comentarios y menu desplegable y les saco el subrayado*/
+    font-family: 'runic';
+    text-decoration: none;
+    }
+  
+#boton-comentarios {
+    transition: all 1s;
+       display: inline-block; /*es para que lo muestreen linea pero funcione como bloque, permite que sea transformable*/
+  }
+  
+  
+#boton-comentarios:hover { /* Agrandar botones del navegador y comentarios */
+    transform: scale(1.2);
+    }
+  
+  
+#boton-comentarios { /* formato a los botones del navegador y comentarios */
+ @extend %navegadores;
+       }
+  
+  #boton-comentarios {
+    border: 1px solid goldenrod;
+    border-radius: 5%;
+    font-weight: bolder;
+  }
+
+    /*Le meto una animación para que la letra del menu cambie de color cuando le paso el mouse por encima*/
+#boton-comentarios:hover {
+        animation-name: cambiocolor;
+        animation-duration: 1.5s;
+        }
+      
+      @keyframes cambiocolor {
+        from {
+           color: goldenrod;
+                 
+        }
+       to {
+           color: red;
+                 
+       }
+      }
+
+
+
+/*-------------------Boton dropdown HISTORIA-------------------------*/
+
+
+#boton-dropdown { /*Agrego letra a los comentarios y menu desplegable y les saco el subrayado*/
+  font-family: 'runic';
+  text-decoration: none;
+  font-weight: bolder;
+  }
+
+
+
+#boton-dropdown { /* formato a los botones del navegador y comentarios */
+@extend %navegadores;
+
+     }
+
+
+  /*Le meto una animación para que la letra del menu cambie de color cuando le paso el mouse por encima*/
+#boton-dropdown:hover {
+      animation-name: cambiocolor;
+      animation-duration: 1.5s;
+      background-color: transparent;
+      }
+    
+    @keyframes cambiocolor {
+      from {
+         color: goldenrod;
+               
+      }
+     to {
+         color: red;
+               
+     }
+    }
+
+
+#desplegable-h li a {
+  @extend %navegadores;
+  display: inline-block;
+}
+
+#desplegable-h li a:hover { 
+  transform: scale(1.2);
+  background-color: transparent;
+}
+
+/*Le meto una animación para que la letra del menu cambie de color cuando le paso el mouse por encima*/
+#desplegable-h li a:hover {
+ animation-name: cambiocolor-historia;
+ animation-duration: 1.5s;
+ }
+
+@keyframes cambiocolor-historia {
+ from {
+    color: goldenrod;
+          
+ }
+to {
+    color: red;
+          
+}
+}
+
+
+
+
+
+/*----------------------Volver al menu principal-----------------------*/
+
+
+  .menu-principal {  /* Formato para el menu de "volver al menu principal"*/
+    color: goldenrod;
+    font-family: 'runic';
+    font-weight: bolder;
+    transition: 1.5s;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 15%;
+    padding: 3px;
+    text-decoration: none;
+    display: inline-block; /*Pongo esto para que lo tome como elemento en bloque y puedan funcionar las transformaciones*/
+  }
+  
+  .menu-principal:hover {
+    transform: scale(1.2);
+  }
+  
+  /*Le meto una animación para que la letra del menu cambie de color cuando le paso el mouse por encima*/
+  .menu-principal:hover {
+    animation-name: cambiocolor-mp;
+    animation-duration: 1.5s;
+    }
+  
+  @keyframes cambiocolor-mp {
+    from {
+       color: goldenrod;
+             
+    }
+   to {
+       color: red;
+             
+   }
+  }
+  
+
+
+
+
+
+  /* --------------------------principio de pagina de cada sección-------------------------- */
+
+
+  .principio-pagina {
+    font-family: 'runic';
+    color: goldenrod;
+    font-size: 30px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    display: block; /*Esto es para que lo tome como un bloque el "a" y pueda separarlo del copyright*/
+  }
+  
+  .principio-pagina:hover {
+    color: red;
+  }
+
+
+
+
+
+
+  /*---------------------------------NAVEGADORES-----------------------------------*/
+
+  .navegador, .navegador-j {
+    text-align: right;
+  }
+
+  
+  .navegador a, .navegador-j a  {
+    font-family: 'runic';
+    text-decoration: none;
+    transition: all 1s;
+    display: inline-block; /*es para que lo muestreen linea pero funcione como bloque, permite que sea transformable*/
+  }
+  
+  
+  .navegador a:hover, .navegador-j a:hover { /* Agrandar botones del navegador y comentarios */
+    transform: scale(1.2);
+    }
+  
+  
+  .desplegables nav a, .navegador-j-container ul a { /* formato a los botones del navegador y comentarios */
+ @extend %navegadores;
+       }
+  
+
+    /*Le meto una animación para que la letra del menu cambie de color cuando le paso el mouse por encima*/
+.desplegables nav a:hover, .navegador-j-container ul a:hover {
+        animation-name: cambiocolor;
+        animation-duration: 1.5s;
+        }
+      
+      @keyframes cambiocolor {
+        from {
+           color: goldenrod;
+                 
+        }
+       to {
+           color: red;
+                 
+       }
+      }
+
+

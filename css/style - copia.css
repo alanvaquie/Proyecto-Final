@@ -1,0 +1,524 @@
+@charset "UTF-8";
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+/* Letra Descargada */
+@font-face {
+  font-family: "runic";
+  src: url(../fonts/Norse.woff) format("woff");
+}
+/* ------------------------------CSS DE INDEX------------------------------- */
+.main-index-container {
+  /* distancio el main del footer */
+  margin-bottom: 100px;
+}
+
+.ruleta-contenedor {
+  /* tamaño para la ruleta */
+  max-width: 500px;
+  max-height: auto;
+}
+
+.navegador a, #boton-comentarios {
+  /*Agrego letra a los comentarios y menu desplegable y les saco el subrayado*/
+  font-family: "runic";
+  text-decoration: none;
+}
+
+.navegador a, #boton-comentarios {
+  transition: all 1s;
+  display: inline-block;
+  /*es para que lo muestreen linea pero funcione como bloque, permite que sea transformable*/
+}
+
+.navegador a:hover, #boton-comentarios:hover {
+  /* Agrandar botones del navegador y comentarios */
+  transform: scale(1.2);
+}
+
+.desplegables nav a, #boton-comentarios {
+  /* formato a los botones del navegador y comentarios */
+  color: goldenrod;
+  margin: 10px;
+  font-style: italic;
+  transition: 1s;
+  width: auto;
+  height: auto;
+  border-radius: 10%;
+  font-size: 20px;
+}
+
+#boton-comentarios {
+  border: 1px solid goldenrod;
+  border-radius: 5%;
+  font-weight: bolder;
+}
+
+/*Le meto una animación para que la letra del menu cambie de color cuando le paso el mouse por encima*/
+.desplegables nav a:hover, #boton-comentarios:hover {
+  animation-name: cambiocolor;
+  animation-duration: 1.5s;
+}
+
+@keyframes cambiocolor {
+  from {
+    color: goldenrod;
+  }
+  to {
+    color: red;
+  }
+}
+.redes-sociales a i {
+  /*agrandamos el tamaño de los iconos de redes sociales*/
+  font-size: xx-large;
+  color: red;
+}
+
+li, ul, a, button {
+  /* le saco los estilos a las listas (puntos por ejemplo) */
+  list-style: none;
+  text-decoration: none;
+}
+
+.header-container {
+  /* pongo de fondo la imagen GIF, que no se repita y este centrada... el padding es para que se vea completa */
+  background-color: transparent;
+  padding: 20px;
+  height: 255px;
+}
+
+.redes-sociales {
+  display: inline-block;
+}
+
+.primero {
+  font-family: "runic";
+  font-size: 8em;
+  color: dimgrey;
+}
+
+.navegador {
+  text-align: right;
+}
+
+.parrafo0 {
+  font-family: "runic";
+  font-size: 1.7em;
+  text-align: left;
+  color: goldenrod;
+}
+
+.parrafo1 {
+  font-family: "Reggae One", cursive;
+  text-align: center;
+  margin: auto;
+  color: snow;
+  font-size: 15px;
+}
+
+.header-container-sections {
+  /*  */
+  background-image: url(../imagenes/Main-Gif.GIF);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  padding: 20px;
+  height: 255px;
+}
+
+.header-container-sections-j {
+  /*  */
+  background-image: url(../imagenes/Main-Gif.GIF);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: black;
+  padding: 20px;
+  height: 255px;
+}
+
+/* Fondo de pantalla del index */
+.full-body {
+  background-image: url(../imagenes/Fondo-de-pantalla.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: black;
+}
+
+/* ------------FOOTER----------- */
+.footer-box-links li a:hover {
+  color: red;
+}
+
+.footer-container {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 12px;
+  color: snow;
+  background-color: transparent;
+}
+
+.footer-container > * {
+  flex: 1 100%;
+}
+
+.footer-left {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+}
+
+.footer-left img {
+  width: 50%;
+}
+
+.footer-right li h2 {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.footer-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-container li {
+  line-height: 2em;
+}
+
+.footer-container a {
+  text-decoration: none;
+}
+
+.footer-right {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.footer-right > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.footer-box a {
+  color: snow;
+}
+
+.footer-left p {
+  padding-right: 20%;
+  color: snow;
+}
+
+/*Ahora acomodamos el footer para que se vea cada uno a la izquierda y el otro a la derecha*/
+@media screen {
+  .footer-right > * {
+    flex: 1;
+  }
+
+  .footer-left {
+    flex: 1 0px;
+  }
+
+  .footer-right {
+    flex: 2 0px;
+  }
+}
+/* Agrandar las redes sociales cuando paso el mouse */
+.redes-sociales a i {
+  transition: 0.5s;
+}
+
+.redes-sociales a i:hover {
+  transform: scale(1.3);
+}
+
+/* ------------COPYRIGHT----------- */
+#copyright {
+  color: crimson;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+/* ------------------------------CSS DE PERSONAJES------------------------------- */
+#header-p {
+  font-family: "runic";
+  font-size: 3em;
+  color: snow;
+}
+
+/* Todos los h3 que son los titulos sean iguales */
+.h3-p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "runic";
+  font-size: 2em;
+  text-align: center;
+  color: saddlebrown;
+}
+
+#listado-personajes {
+  /* pongo el listado con Flexbox y lo posiciono a la izquierda abajo del header-container */
+  font-family: "runic";
+  display: flex;
+  font-size: 25px;
+  justify-content: start;
+  max-width: 80%;
+  margin-top: 60px;
+  transition: 1.5s;
+}
+
+#listado-personajes #navegador-p li {
+  /* hago que las listas sean bloques, tengan borde y les doy margen para separarlas entre si */
+  margin: 10px 22px;
+  display: block;
+}
+
+#navegador-p {
+  /* sigo con flexbox y separo los las listas ul */
+  display: flex;
+  justify-content: space-between;
+}
+
+#listado-personajes #navegador-p .li-p {
+  /* las pongo en linea y centradas */
+  display: inline-block;
+  text-align: center;
+  justify-content: center;
+}
+
+#listado-personajes #navegador-p .desplegable-j {
+  /* con el display none dejo invisibles las il dentro de las ul y con la posición absoluta evito que se desconfiguren los tamaños de las ul */
+  display: none;
+  position: absolute;
+}
+
+#listado-personajes #navegador-p .li-p:hover .desplegable-j {
+  /* convierto en bloques los desplegables, con hover digo como se va a comportar cuando ponga el mouse encima */
+  display: block;
+}
+
+#listado-personajes ul li a {
+  /* Color golden a la letra de todas las listas de personajes */
+  color: goldenrod;
+  transition: 1.5s;
+  display: inline-block;
+}
+
+#navegador-p li a:hover {
+  transform: scale(1.2);
+}
+
+/*Le meto una animación para que la letra del menu cambie de color cuando le paso el mouse por encima*/
+#navegador-p li a:hover {
+  animation-name: cambiocolor-personajes;
+  animation-duration: 1.5s;
+}
+
+@keyframes cambiocolor-personajes {
+  from {
+    color: goldenrod;
+  }
+  to {
+    color: red;
+  }
+}
+/* Centrar las imagenes */
+.img-p {
+  display: block;
+  margin: auto;
+  width: 300px;
+  height: 400px;
+}
+
+/* Todos los parrafos iguales */
+.parrafo-p {
+  font-family: "reggae one";
+  text-indent: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu-principal {
+  /* Formato para el menu de "volver al menu principal"*/
+  color: goldenrod;
+  font-family: "runic";
+  font-weight: bolder;
+  transition: 1.5s;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 2px solid goldenrod;
+  border-radius: 15%;
+  padding: 3px;
+  text-decoration: none;
+  display: inline-block;
+  /*Pongo esto para que lo tome como elemento en bloque y puedan funcionar las transformaciones*/
+}
+
+.menu-principal:hover {
+  transform: scale(1.2);
+}
+
+/*Le meto una animación para que la letra del menu cambie de color cuando le paso el mouse por encima*/
+.menu-principal:hover {
+  animation-name: cambiocolor-mp;
+  animation-duration: 1.5s;
+}
+
+@keyframes cambiocolor-mp {
+  from {
+    color: goldenrod;
+  }
+  to {
+    color: red;
+  }
+}
+/* Configurar el boton de principio de pagina de cada sección */
+.principio-pagina {
+  font-family: "runic";
+  color: goldenrod;
+  font-size: 25px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  display: block;
+  /*Esto es para que lo tome como un bloque el "a" y pueda separarlo del copyright*/
+}
+
+.principio-pagina:hover {
+  color: red;
+}
+
+/* ------------------------------------------------CSS DE HISTORIA---------------------------------------- */
+#header-h {
+  font-family: "runic";
+  font-size: 3em;
+  color: snow;
+}
+
+/* Todos los h3 que son los titulos sean iguales */
+.h3-h {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "runic";
+  font-size: 2em;
+  text-align: center;
+  color: saddlebrown;
+}
+
+/* Todos los parrafos iguales */
+.parrafo-h {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "reggae one";
+  text-indent: 10px;
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+}
+
+/* ------------------------------------------------CSS DE JUEGOS---------------------------------------- */
+#header-j {
+  font-family: "runic";
+  font-size: 4em;
+  color: snow;
+}
+
+/* Todos los h3 que son los titulos sean iguales */
+.h3-j {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "runic";
+  font-size: 2em;
+  text-align: center;
+  color: saddlebrown;
+}
+
+/* Todos los parrafos iguales */
+.parrafo-j {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "reggae one";
+  text-indent: 10px;
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Centrar las imagenes */
+.img-j {
+  display: block;
+  margin: auto;
+  width: 300px;
+  height: 400px;
+  padding: 10px;
+}
+
+/* Mandamos flexbox al buscador */
+.navegador-j-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  max-width: 70%;
+}
+
+.navegador-j {
+  font-family: "runic";
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: 23px;
+}
+
+.listado-j {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin: 7px;
+  transition: 1s;
+  border: 2px solid goldenrod;
+  border-radius: 15%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.listado-j a {
+  color: goldenrod;
+  text-decoration: none;
+}
+
+/*Meto transformaciones en el menu*/
+.listado-j:hover {
+  /*Aca le digo que se agrande y cambie de color de fondo a gris*/
+  transform: scale(1.1);
+  animation-name: menujuegos;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  /*Para que se quede gris*/
+}
+
+@keyframes menujuegos {
+  to {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+.listado-j a:hover {
+  /*Aca le digo que cambie de color las letras a rojo*/
+  animation-name: colorletras;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes colorletras {
+  from {
+    color: goldenrod;
+  }
+  to {
+    color: red;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

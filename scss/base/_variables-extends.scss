@@ -1,0 +1,32 @@
+/*   ------Configuración visual de los botones de os navegadores-----  */
+
+/*----EXTENDS----*/
+%navegadores {
+    color: goldenrod;
+    margin: 10px;
+    font-style: italic;
+    transition: 1s;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    font-family: 'runic';
+}
+
+%h3-secciones {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'runic';
+    font-size: 3em;
+    text-align:initial;
+    color: red;
+}
+
+/*----VARIABLES----*/
+
+$color-parrafo: snow;
+
+/*----MIXINS----*/
+
+@mixin agrandar ($escala){
+    transform: $escala;
+}

@@ -1,0 +1,57 @@
+  /* ------------------------------------------------CSS DE HISTORIA---------------------------------------- */
+  
+  #header-h {    
+    font-family: 'runic'; 
+    font-size: 3em;
+    color: $color-parrafo;
+ }   
+ 
+ 
+  /* Todos los h3 que son los titulos sean iguales */
+  .h3-h {
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    font-family: 'runic';
+    font-size: 2em;
+    text-align: center;
+    color: saddlebrown;
+  }
+ 
+ 
+  /* Todos los parrafos iguales */
+  .parrafo-h {
+     margin-top: 20px;
+     margin-bottom: 20px;
+    font-family: 'reggae one';
+    text-indent: 10px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    color: $color-parrafo;
+
+    a {
+      text-decoration: none;
+      color: red;
+      font-size: 1.3em;
+
+
+      
+    }
+  }
+
+  .parrafo-h a:hover {
+    color: darken(red, 20%);
+  }
+ 
+  .full-body-h {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8)), url(../imagenes/bg-historia.png); /*Con el linear-gradient le meto una capa transparente negra encima para opacar la imagen de fondo*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+ 
+  }
+
+  

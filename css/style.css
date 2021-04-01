@@ -1,0 +1,568 @@
+@charset "UTF-8";
+/*   ------Configuración visual de los botones de os navegadores-----  */
+/*----EXTENDS----*/
+.desplegables nav a, .navegador-j-container ul a, #desplegable-h li a, #boton-dropdown, #boton-comentarios {
+  color: goldenrod;
+  margin: 10px;
+  font-style: italic;
+  transition: 1s;
+  width: auto;
+  height: auto;
+  font-size: 20px;
+  font-family: "runic";
+}
+
+.h3-j, .h3-p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "runic";
+  font-size: 3em;
+  text-align: initial;
+  color: red;
+}
+
+/*----VARIABLES----*/
+/*----MIXINS----*/
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+/* Letra Descargada */
+@font-face {
+  font-family: "runic";
+  src: url(../fonts/Norse.woff) format("woff");
+}
+/* ------------------------------CSS DE INDEX------------------------------- */
+.main-index-container {
+  /* distancio el main del footer */
+  margin-bottom: 100px;
+}
+
+.ruleta-contenedor {
+  /* tamaño para la ruleta */
+  max-width: 500px;
+  max-height: auto;
+}
+
+.header-container {
+  /* pongo de fondo la imagen GIF, que no se repita y este centrada... el padding es para que se vea completa */
+  background-color: transparent;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+
+.primero {
+  font-family: "runic";
+  font-size: 8em;
+  color: dimgrey;
+}
+
+.parrafo0 {
+  font-family: "runic";
+  font-size: 2.5em;
+  text-align: left;
+  color: goldenrod;
+}
+
+.parrafo1 {
+  font-family: "Reggae One", cursive;
+  text-align: center;
+  margin: auto;
+  color: snow;
+  font-size: 15px;
+}
+
+/* Fondo de pantalla del index */
+.full-body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../imagenes/Fondo-de-pantalla.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* ------------FOOTER----------- */
+.footer-box-links li a:hover {
+  color: red;
+}
+
+.footer-container {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 12px;
+  color: snow;
+  background-color: transparent;
+}
+
+.footer-container > * {
+  flex: 1 100%;
+}
+
+.footer-left {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+}
+
+.footer-left img {
+  width: 50%;
+}
+
+.footer-right li h2 {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.footer-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-container li {
+  line-height: 2em;
+}
+
+.footer-container a {
+  text-decoration: none;
+}
+
+.footer-right {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.footer-right > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.footer-box a {
+  color: snow;
+}
+
+.footer-left p {
+  padding-right: 20%;
+  color: snow;
+}
+
+/*Ahora acomodamos el footer para que se vea cada uno a la izquierda y el otro a la derecha*/
+@media screen {
+  .footer-right > * {
+    flex: 1;
+  }
+
+  .footer-left {
+    flex: 1 0px;
+  }
+
+  .footer-right {
+    flex: 2 0px;
+  }
+}
+/* Agrandar las redes sociales cuando paso el mouse */
+.redes-sociales a i {
+  transition: 0.5s;
+}
+
+.redes-sociales a i:hover {
+  transform: scale(1.2);
+}
+
+.redes-sociales a i {
+  /*agrandamos el tamaño de los iconos de redes sociales*/
+  font-size: xx-large;
+  color: red;
+}
+
+.redes-sociales {
+  display: inline-block;
+}
+
+/* ------------COPYRIGHT----------- */
+#copyright {
+  color: crimson;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+/* ------------------------------CSS DE PERSONAJES------------------------------- */
+.header-container-sections-j {
+  background-color: transparent;
+  padding: 20px;
+  margin-bottom: 80px;
+}
+
+#header-p {
+  font-family: "runic";
+  font-size: 3em;
+  color: snow;
+}
+
+/* Todos los h3 que son los titulos sean iguales */
+#listado-personajes {
+  /* pongo el listado con Flexbox y lo posiciono a la izquierda abajo del header-container */
+  font-family: "runic";
+  display: flex;
+  font-size: 25px;
+  justify-content: start;
+  max-width: 80%;
+  margin-top: 15px;
+  transition: 1.5s;
+}
+
+#listado-personajes #navegador-p li {
+  /* hago que las listas sean bloques, tengan borde y les doy margen para separarlas entre si */
+  margin: 10px 22px;
+  display: block;
+}
+
+#navegador-p {
+  /* sigo con flexbox y separo los las listas ul */
+  display: flex;
+  justify-content: space-between;
+}
+
+#listado-personajes #navegador-p .li-p {
+  /* las pongo en linea y centradas */
+  display: inline-block;
+  text-align: center;
+  justify-content: center;
+}
+
+#listado-personajes #navegador-p .desplegable-j {
+  /* con el display none dejo invisibles las il dentro de las ul y con la posición absoluta evito que se desconfiguren los tamaños de las ul */
+  display: none;
+  position: absolute;
+}
+
+#listado-personajes #navegador-p .li-p:hover .desplegable-j {
+  /* convierto en bloques los desplegables, con hover digo como se va a comportar cuando ponga el mouse encima, esto es para mostrar los desplegables */
+  display: block;
+}
+
+#listado-personajes ul li a {
+  /* Color golden a la letra de todas las listas de personajes */
+  color: goldenrod;
+  transition: 1.5s;
+  display: inline-block;
+  text-decoration: none;
+}
+
+#navegador-p li a:hover {
+  transform: scale(1.2);
+}
+
+/*Le meto una animación para que la letra del menu cambie de color cuando le paso el mouse por encima*/
+#navegador-p li a:hover {
+  animation-name: cambiocolor-personajes;
+  animation-duration: 1.5s;
+}
+
+@keyframes cambiocolor-personajes {
+  from {
+    color: goldenrod;
+  }
+  to {
+    color: red;
+  }
+}
+/* Centrar las imagenes */
+.img-p {
+  display: block;
+  margin: auto;
+  width: auto;
+  height: 300px;
+}
+
+/* Todos los parrafos iguales */
+.parrafo-p {
+  font-family: "reggae one";
+  text-indent: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: snow;
+}
+
+/* Fondo de pantalla de personajes*/
+.full-body-p {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imagenes/bg-personajes.jpg);
+  /*Con el linear-gradient le meto una capa transparente negra encima para opacar la imagen de fondo*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* ------------------------------------------------CSS DE HISTORIA---------------------------------------- */
+#header-h {
+  font-family: "runic";
+  font-size: 3em;
+  color: snow;
+}
+
+/* Todos los h3 que son los titulos sean iguales */
+.h3-h {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "runic";
+  font-size: 2em;
+  text-align: center;
+  color: saddlebrown;
+}
+
+/* Todos los parrafos iguales */
+.parrafo-h {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "reggae one";
+  text-indent: 10px;
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  color: snow;
+}
+.parrafo-h a {
+  text-decoration: none;
+  color: red;
+  font-size: 1.3em;
+}
+
+.parrafo-h a:hover {
+  color: #990000;
+}
+
+.full-body-h {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../imagenes/bg-historia.png);
+  /*Con el linear-gradient le meto una capa transparente negra encima para opacar la imagen de fondo*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* ------------------------------------------------CSS DE JUEGOS---------------------------------------- */
+#header-j {
+  font-family: "runic";
+  font-size: 4em;
+  color: snow;
+}
+
+/* Todos los h3 que son los titulos sean iguales */
+/* Todos los parrafos iguales */
+.parrafo-j {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "reggae one";
+  text-indent: 10px;
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  color: snow;
+}
+
+/* Centrar las imagenes */
+.img-j {
+  display: block;
+  margin: auto;
+  padding: 10px;
+  width: 300px;
+  height: auto;
+}
+
+.full-body-j {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imagenes/bg-juegos.jpg);
+  /*Con el linear-gradient le meto una capa transparente negra encima para opacar la imagen de fondo*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+li, ul, a, button {
+  /* le saco los estilos a las listas (puntos por ejemplo) */
+  list-style: none;
+  text-decoration: none;
+}
+
+/*-------------------Boton de comentarios-------------------------*/
+#boton-comentarios {
+  /*Agrego letra a los comentarios y menu desplegable y les saco el subrayado*/
+  font-family: "runic";
+  text-decoration: none;
+}
+
+#boton-comentarios {
+  transition: all 1s;
+  display: inline-block;
+  /*es para que lo muestreen linea pero funcione como bloque, permite que sea transformable*/
+}
+
+#boton-comentarios:hover {
+  /* Agrandar botones del navegador y comentarios */
+  transform: scale(1.2);
+}
+
+#boton-comentarios {
+  /* formato a los botones del navegador y comentarios */
+}
+
+#boton-comentarios {
+  border: 1px solid goldenrod;
+  border-radius: 5%;
+  font-weight: bolder;
+}
+
+/*Le meto una animación para que la letra del menu cambie de color cuando le paso el mouse por encima*/
+#boton-comentarios:hover {
+  animation-name: cambiocolor;
+  animation-duration: 1.5s;
+}
+
+@keyframes cambiocolor {
+  from {
+    color: goldenrod;
+  }
+  to {
+    color: red;
+  }
+}
+/*-------------------Boton dropdown HISTORIA-------------------------*/
+#boton-dropdown {
+  /*Agrego letra a los comentarios y menu desplegable y les saco el subrayado*/
+  font-family: "runic";
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+#boton-dropdown {
+  /* formato a los botones del navegador y comentarios */
+}
+
+/*Le meto una animación para que la letra del menu cambie de color cuando le paso el mouse por encima*/
+#boton-dropdown:hover {
+  animation-name: cambiocolor;
+  animation-duration: 1.5s;
+  background-color: transparent;
+}
+
+@keyframes cambiocolor {
+  from {
+    color: goldenrod;
+  }
+  to {
+    color: red;
+  }
+}
+#desplegable-h li a {
+  display: inline-block;
+}
+
+#desplegable-h li a:hover {
+  transform: scale(1.2);
+  background-color: transparent;
+}
+
+/*Le meto una animación para que la letra del menu cambie de color cuando le paso el mouse por encima*/
+#desplegable-h li a:hover {
+  animation-name: cambiocolor-historia;
+  animation-duration: 1.5s;
+}
+
+@keyframes cambiocolor-historia {
+  from {
+    color: goldenrod;
+  }
+  to {
+    color: red;
+  }
+}
+/*----------------------Volver al menu principal-----------------------*/
+.menu-principal {
+  /* Formato para el menu de "volver al menu principal"*/
+  color: goldenrod;
+  font-family: "runic";
+  font-weight: bolder;
+  transition: 1.5s;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 15%;
+  padding: 3px;
+  text-decoration: none;
+  display: inline-block;
+  /*Pongo esto para que lo tome como elemento en bloque y puedan funcionar las transformaciones*/
+}
+
+.menu-principal:hover {
+  transform: scale(1.2);
+}
+
+/*Le meto una animación para que la letra del menu cambie de color cuando le paso el mouse por encima*/
+.menu-principal:hover {
+  animation-name: cambiocolor-mp;
+  animation-duration: 1.5s;
+}
+
+@keyframes cambiocolor-mp {
+  from {
+    color: goldenrod;
+  }
+  to {
+    color: red;
+  }
+}
+/* --------------------------principio de pagina de cada sección-------------------------- */
+.principio-pagina {
+  font-family: "runic";
+  color: goldenrod;
+  font-size: 30px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  display: block;
+  /*Esto es para que lo tome como un bloque el "a" y pueda separarlo del copyright*/
+}
+
+.principio-pagina:hover {
+  color: red;
+}
+
+/*---------------------------------NAVEGADORES-----------------------------------*/
+.navegador, .navegador-j {
+  text-align: right;
+}
+
+.navegador a, .navegador-j a {
+  font-family: "runic";
+  text-decoration: none;
+  transition: all 1s;
+  display: inline-block;
+  /*es para que lo muestreen linea pero funcione como bloque, permite que sea transformable*/
+}
+
+.navegador a:hover, .navegador-j a:hover {
+  /* Agrandar botones del navegador y comentarios */
+  transform: scale(1.2);
+}
+
+.desplegables nav a, .navegador-j-container ul a {
+  /* formato a los botones del navegador y comentarios */
+}
+
+/*Le meto una animación para que la letra del menu cambie de color cuando le paso el mouse por encima*/
+.desplegables nav a:hover, .navegador-j-container ul a:hover {
+  animation-name: cambiocolor;
+  animation-duration: 1.5s;
+}
+
+@keyframes cambiocolor {
+  from {
+    color: goldenrod;
+  }
+  to {
+    color: red;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,91 @@
+.header-container-sections { /*  */
+    background-image: url(../imagenes/Main-Gif.GIF);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    padding: 20px;
+    height: 255px;
+    }
+  
+  .header-container-sections-j { /*  */
+       background-image: url(../imagenes/Main-Gif.GIF);
+       background-position: right;
+       background-repeat: no-repeat;
+       background-color: black;
+       padding: 20px;
+       height: 255px;
+       }
+
+
+
+       /*Juevos Nav*/
+
+        /* Mandamos flexbox al buscador */
+ .navegador-j-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  max-width: 70%;
+} 
+
+.navegador-j {
+ font-family: 'runic';
+ display: flex;
+ justify-content: space-around;
+ flex-wrap: wrap;
+ font-size: 23px;
+    }
+
+.listado-j {
+ 
+ padding-top: 0px;
+ padding-bottom: 0px;
+ padding-left: 3px;
+ padding-right: 3px;
+ margin: 7px;
+ transition: 1s;
+ border: 2px solid goldenrod;
+ border-radius: 15%;
+ 
+ background-color: rgba(255,255,255,.1);
+}
+
+.listado-j a {
+ color: goldenrod;
+ text-decoration: none;
+}
+
+/*Meto transformaciones en el menu*/
+
+.listado-j:hover { /*Aca le digo que se agrande y cambie de color de fondo a gris*/
+ transform: scale(1.1);
+ animation-name: menujuegos;
+ animation-duration: 1s;
+ animation-fill-mode: both; /*Para que se quede gris*/
+ }
+
+@keyframes menujuegos {
+ from {
+    
+ }
+ to {      
+    
+    background: rgba(255,255,255,.2); ;
+      
+ }
+}
+
+.listado-j a:hover { /*Aca le digo que cambie de color las letras a rojo*/
+animation-name: colorletras;
+animation-duration: 1s;
+animation-fill-mode: both;
+}
+
+@keyframes colorletras {
+ from {
+    color: goldenrod;
+ }
+ to {      
+    color: red;    
+ }
+}
