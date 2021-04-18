@@ -19,74 +19,87 @@
    @extend %h3-secciones;
  }
  
- 
- 
- #listado-personajes { /* pongo el listado con Flexbox y lo posiciono a la izquierda abajo del header-container */
-    font-family: 'runic';
-    display: flex;
-    font-size: 25px;
-    justify-content: start;
-    max-width: 80%;
-    margin-top: 15px;
-    transition: 1.5s;  
- }
- 
- #listado-personajes #navegador-p li { /* hago que las listas sean bloques, tengan borde y les doy margen para separarlas entre si */
-    margin: 10px 22px;
-    display: block;
-     }
- 
- #navegador-p { /* sigo con flexbox y separo los las listas ul */
-    display: flex;
-    justify-content: space-between;
- }
- 
- #listado-personajes #navegador-p .li-p {  /* las pongo en linea y centradas */
-            display: inline-block;
-            text-align: center;
-            justify-content: center;      
- }
- 
- #listado-personajes #navegador-p .desplegable-j { /* con el display none dejo invisibles las il dentro de las ul y con la posición absoluta evito que se desconfiguren los tamaños de las ul */
-    display: none;
-    position: absolute;
 
- }
- 
- #listado-personajes #navegador-p .li-p:hover .desplegable-j {  /* convierto en bloques los desplegables, con hover digo como se va a comportar cuando ponga el mouse encima, esto es para mostrar los desplegables */
-    display: block;
- }
+ /* Menu Desplegable Bootstrap */
 
-
-
- 
- #listado-personajes ul li a { /* Color golden a la letra de todas las listas de personajes */
-   color: goldenrod;
+.listado-personajes { /* pongo el listado con Flexbox y lo posiciono a la izquierda abajo del header-container */
+   font-family: 'runic';
+   font-size: 25px;
+   justify-content: start;
+   max-width: 80%;
+   margin-top: 15px;
    transition: 1.5s;
-   display: inline-block;
-   text-decoration: none;
- }
- #navegador-p li a:hover { 
-    transform: scale(1.2);
- }
- 
- /*Le meto una animación para que la letra del menu cambie de color cuando le paso el mouse por encima*/
- #navegador-p li a:hover {
-   animation-name: cambiocolor-personajes;
-   animation-duration: 1.5s;
+}
 
-   }
- 
- @keyframes cambiocolor-personajes {
-   from {
-      color: goldenrod;
-            
-   }
-  to {
-      color: red;
-            
+.listado-personajes .navegador-p li { /* hago que las listas sean bloques, tengan borde y les doy margen para separarlas entre si */
+   margin: 10px 22px;
+    }
+
+.navegador-p { /* sigo con flexbox y separo los las listas ul */
+   justify-content: space-between;
+}
+
+.listado-personajes .navegador-p .li-p {  /* las pongo en linea y centradas */
+           text-align: center;
+           justify-content: center;      
+}
+
+
+
+.listado-personajes .navegador-p .li-p:hover .desplegable-j {  /* convierto en bloques los desplegables, con hover digo como se va a comportar cuando ponga el mouse encima, esto es para mostrar los desplegables */
+   display: block;
+}
+
+
+
+
+.listado-personajes ul li a { /* Color golden a la letra de todas las listas de personajes */
+  color: goldenrod;
+  transition: 1.5s;
+  text-decoration: none;
+}
+
+
+.navegador-p li a:hover { 
+   transform: scale(1.2);
+}
+
+/*Le meto una animación para que la letra del menu cambie de color cuando le paso el mouse por encima*/
+.navegador-p li a:hover {
+  animation-name: cambiocolor-personajes;
+  animation-duration: 1.5s;
+
   }
+
+@keyframes cambiocolor-personajes {
+  from {
+     color: goldenrod;
+           
+  }
+ to {
+     color: red;
+           
  }
+}
+
+.nav-per-menu {
+   font-family: 'runic';
+   font-size: 25px;
+   color: goldenrod;
+   border: none;
+}
+
+/* Hago transparente el fondo de los desplegables */
+.nav-per-format .nav-item .dropdown-menu {
+   background-color: transparent;
+   border: none;
+}
+
+/* Hago transparente el fondo de los desplegables cuando les paso el mouse por encima */
+.navbar .nav-item .dropdown-menu .dropdown-item:hover {
+   background-color: transparent
+}
+
 
 
 
@@ -106,6 +119,7 @@
     text-align: center;
     margin-bottom: 20px;
     color: $color-parrafo;
+    justify-content: center;
       
  }
 

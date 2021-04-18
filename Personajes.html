@@ -18,9 +18,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-             <!-- SEO -->
-  <meta name="description" content="sección de Personajes de God of War">
-  <meta name="keywords" content="God of War, videojuego, play station, playstation, Kratos, Santa Monica Studio, David Jaffe, personajes">
+    <!-- SEO -->
+    <meta name="description" content="sección de Personajes de God of War">
+    <meta name="keywords"
+        content="God of War, videojuego, play station, playstation, Kratos, Santa Monica Studio, David Jaffe, personajes">
 
 
     <title>Personajes / God Of War</title>
@@ -39,32 +40,52 @@
                 </div>
 
 
-                <div id="listado-personajes">
-                    <ul id="navegador-p">
-                        <!--Lista de personajes de GOW seccionada-->
-                        <li class="li-p"><a href="#kratos">Kratos</a></li>
-                        <li class="li-p"><a href="#atreus">Atreus</a></li>
-                        <li class="li-p"><a href="#ares">Dioses Griegos</a>
-                            <ul class="desplegable-j">
-                                <!--sub-lista dentro de dioses griegos-->
-                                <li><a href="#ares">Ares</a></li>
-                                <li><a href="#hades">Hades</a></li>
-                                <li><a href="#poseidon">Poseidón</a></li>
-                                <li><a href="#zeus">Zeus</a></li>
-                            </ul>
-                        </li>
-                        <li class="li-p"><a href="#freya">Dioses Nordicos</a>
-                            <ul class="desplegable-j">
-                                <!--sub-lista dentro de dioses nordicos-->
-                                <li><a href="#freya">Freya</a></li>
-                                <li><a href="#mimir">Mimir</a></li>
-                                <li><a href="#baldur">Baldur</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
+                                <!-- Navbar Bootstrap-->
+                                <nav class="nav-per-format navbar navbar-expand-lg bg-transparen ml-auto">
+                                    <div class="container ">
+                                        <a class="navbar-brand" href="#"><img class="primero col-5" src="imagenes/GOW logo.png"
+                                                alt="Logo superior GOW"></a>
+                                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                            aria-expanded="false" aria-label="Toggle navigation">
+                                            <span class="navbar-toggler-icon nav-per-menu">Menu</span>
+                                        </button>
+                                        <div class="listado-personajes collapse navbar-collapse" id="navbarSupportedContent">
+                                            <ul class="navegador-p navbar-nav me-auto mb-2 mb-lg-0">
+                                                <li class="nav-item">
+                                                    <a class="li-p nav-link active" aria-current="page" href="#kratos">Kratos</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="li-p nav-link active" aria-current="page" href="#atreus">Atreus</a>
+                                                </li>
+                                                <li class="li-p nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#ares" id="navbarDropdown" role="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Dioses Griegos
+                                                    </a>
+                                                    <ul class="desplegable-j dropdown-menu" aria-labelledby="navbarDropdown">
+                                                        <li><a class="dropdown-item" href="#ares">Ares</a></li>
+                                                        <li><a class="dropdown-item" href="#hades">Hades</a></li>
+                                                        <li><a class="dropdown-item" href="#poseidon">Poseidón</a></li>
+                                                        <li><a class="dropdown-item" href="#zeus">Zeus</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="li-p nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#freya" id="navbarDropdown" role="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Dioses Nordicos
+                                                    </a>
+                                                    <ul class="desplegable-j dropdown-menu" aria-labelledby="navbarDropdown">
+                                                        <li><a class="dropdown-item" href="#freya">Freya</a></li>
+                                                        <li><a class="dropdown-item" href="#mimir">Mimir</a></li>
+                                                        <li><a class="dropdown-item" href="#baldur">Baldur</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                
+                                        </div>
+                                    </div>
+                                </nav>
 
 
         </header>
@@ -80,7 +101,7 @@
                     <p class="parrafo-p">Hijo de Zeus y una mujer mortal.</p>
                 </div>
 
-                <div class="col-8 d-flex align-items-center justify-content-center">
+                <div class="col-md-8 d-flex align-items-center justify-content-center">
                     <!--esto es para que el parrafo quede centrado en la fila que contiene la imagen-->
                     <p class="parrafo-p">Nacido en esparta, hermano de Deimos. Fueron separados de Jovenes debido a una
                         profecia que
@@ -100,7 +121,7 @@
                     <img class="img-p" src="img-personajes/Atreus.jpg" alt="Aatreus Imagen">
                     <p class="parrafo-p">Atreus es el hijo de Kratos y Faye. Acompaña a su padre en God of War PS4.</p>
                 </div>
-                <div class="col-8 d-flex align-items-center justify-content-center">
+                <div class="col-md-8 d-flex align-items-center justify-content-center">
                     <!--esto es para que el parrafo quede centrado en la fila que contiene la imagen-->
                     <p class="parrafo-p">Atreus era un niño enfermizo que ha vivido siempre con su madre.
                         Ambos pasaban largos períodos de tiempo sin ver a Kratos, pero tras el fallecimiento de Faye,
@@ -119,7 +140,7 @@
                     <img class="img-p" src="img-personajes/Ares.jpg" alt="Ares Imagen">
                     <p class="parrafo-p">Ares es el Dios de la Guerra, principal protagonista de de God of War I</p>
                 </div>
-                <div class="col-8 d-flex align-items-center justify-content-center">
+                <div class="col-md-8 d-flex align-items-center justify-content-center">
                     <p class="parrafo-p">Ares aparece en esta historia como el principal enemigo de Kratos, debido a que
                         invadió
                         Atenas,
@@ -141,7 +162,7 @@
                         únicamente
                         interesado en aumentar el número de sus súbditos</p>
                 </div>
-                <div class="col-8 d-flex align-items-center justify-content-center">
+                <div class="col-md-8 d-flex align-items-center justify-content-center">
                     <p class="parrafo-p">Dios del Inframundo, hermano de Zeus y Poseidón. Peleó contra los Titanes,
                         ayudó a
                         derrocar
@@ -165,7 +186,7 @@
                         su
                         hermano Zeus.</p>
                 </div>
-                <div class="col-8 d-flex align-items-center justify-content-center">
+                <div class="col-md-8 d-flex align-items-center justify-content-center">
                     <p class="parrafo-p">Dios de los Mares, hijo de los titanes Cronos y Rea. A temprana edad fue
                         tragado con
                         vida
@@ -194,7 +215,7 @@
                         Kratos. Él
                         ejerce como principal antagonista en God of War II y God of War III.</p>
                 </div>
-                <div class="col-8 d-flex align-items-center justify-content-center">
+                <div class="col-md-8 d-flex align-items-center justify-content-center">
                     <p class="parrafo-p">Zeus era el rey de los dioses, gobernante del Monte Olimpo y Dios del cielo
                         y los relámpagos. Sus símbolos eran el Rayo, el Águila, el Toro, la Serpiente,
                         y el Roble. Zeus era el hijo de los Titanes Cronos y Rea, y el más joven pero más
@@ -222,7 +243,7 @@
                         aliada de Kratos y su hijo Atreus. Ella también fue la esposa de Odín y es la madre de Baldur.
                     </p>
                 </div>
-                <div class="col-8 justify-content-center d-flex align-items-center">
+                <div class="col-md-8 justify-content-center d-flex align-items-center">
                     <p class="parrafo-p">Freyja, o Freya, es una de las diosas mayores en la mitología nórdica y
                         germánica.
                         En las Eddas, Freyja es descrita como la diosa del amor, la belleza y la fertilidad.
@@ -246,7 +267,7 @@
                         un aliado de Kratos y Atreus en God of War PS4.</p>
 
                 </div>
-                <div class="col-8 justify-content-center d-flex align-items-center">
+                <div class="col-md-8 justify-content-center d-flex align-items-center">
                     <p class="parrafo-p">Mimir es un gigante mitológico escandinavo. Era tío materno de Odín y guardián
                         de las
                         fuentes de la sabiduría,
@@ -278,7 +299,7 @@
                         del
                         hermano de Thor.</p>
                 </div>
-                <div class="col-8 justify-content-center d-flex align-items-center">
+                <div class="col-md-8 justify-content-center d-flex align-items-center">
                     <p class="parrafo-p">Balder o Baldr es un dios y el segundo hijo de Odín. Baldr es conocido
                         principalmente
                         por
